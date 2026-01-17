@@ -1,7 +1,25 @@
 import React from 'react';
+import imgYoga1 from '../assets/yoga1.jpg';
+import imgYoga2 from '../assets/yoga2.jpg';
+import imgYoga3 from '../assets/yoga3.jpg';
+import imgYoga4 from '../assets/yoga4.jpg';
+import imgYoga5 from '../assets/yoga5.jpg';
+import imgYoga6 from '../assets/yoga6.jpg';
+
 
 const YogaWellness = () => {
   return (
+
+
+      <div>
+ {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">YOGA</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-accent mb-8 text-center">YOGA</h1>
@@ -29,18 +47,13 @@ const YogaWellness = () => {
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-accent mb-6 text-center">Yoga Activities</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Yoga Session Photo 1</span>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Yoga Session Photo 2</span>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Yoga Workshop Photo</span>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Vivekananda Silhouette</span>
-            </div>
+           <img src={imgYoga1} alt="Yoga Activity 1" className="rounded-lg shadow-md w-full" /> 
+            <img src={imgYoga2} alt="Yoga Activity 2" className="rounded-lg shadow-md w-full" />  
+                        <img src={imgYoga3} alt="Yoga Activity 1" className="rounded-lg shadow-md w-full" /> 
+            <img src={imgYoga4} alt="Yoga Activity 2" className="rounded-lg shadow-md w-full" />  
+                    <img src={imgYoga5} alt="Yoga Activity 1" className="rounded-lg shadow-md w-full" /> 
+            <img src={imgYoga6} alt="Yoga Activity 2" className="rounded-lg shadow-md w-full" />  
+
           </div>
         </div>
 
@@ -120,6 +133,7 @@ const YogaWellness = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

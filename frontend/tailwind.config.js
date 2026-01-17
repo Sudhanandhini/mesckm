@@ -8,9 +8,9 @@ export default {
     extend: {
       colors: {
         primary: '#990c28', // Brown/olive gold from the website
-        secondary: '#990c28',
+        secondary: '#fffbeb',
         accent: '#990c28', // Red for headings
-        gold: '#D4AF37',
+        gold: '#fffbeb',
       },
     },
   },

@@ -28,6 +28,16 @@ const RankHolders = () => {
   ];
 
   return (
+
+      <div>
+ {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Rank Holder</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-accent mb-8 text-center">UG Rank Holder's List</h1>
@@ -116,6 +126,7 @@ const RankHolders = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

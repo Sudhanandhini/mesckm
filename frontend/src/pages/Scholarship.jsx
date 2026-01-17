@@ -1,5 +1,8 @@
 import React from 'react';
 
+import imgScholarship from '../assets/scholar.jpg';
+
+
 const Scholarship = () => {
   const scholarships = [
     'Post Metric Scholarships to SC, ST & other Backward Class Students.',
@@ -17,16 +20,26 @@ const Scholarship = () => {
   ];
 
   return (
+
+
+     <div>
+ {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn"> Scholarship Programs</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+
+
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-accent mb-8 text-center">Scholarship Programs</h1>
-
+        
         {/* Header Image */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <div className="flex justify-center mb-6">
-            <div className="bg-gray-200 w-96 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Scholarship Image</span>
-            </div>
+           <img src={imgScholarship} alt="Scholarship" className="rounded-lg shadow-md w-64" />
           </div>
 
           <div className="text-center mb-6">
@@ -103,6 +116,7 @@ const Scholarship = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

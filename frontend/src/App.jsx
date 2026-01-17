@@ -19,6 +19,8 @@ import Scholarship from './pages/Scholarship';
 import RankHolders from './pages/RankHolders';
 import YogaWellness from './pages/YogaWellness';
 import Contact from './pages/Contact';
+import Library from './pages/Library';
+import Laboratories from './pages/Laboratories';
 
 function App() {
   return (
@@ -32,13 +34,13 @@ function App() {
             <Route path="/donor" element={<Donor />} />
             <Route path="/course-regulations" element={<CourseRegulations />} />
             <Route path="/facilities" element={<Facilities />} />
-            <Route path="/facilities/library" element={<Facilities />} />
-            <Route path="/facilities/laboratories" element={<Facilities />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/laboratories" element={<Laboratories />} />
             <Route path="/faculty" element={<Faculty />} />
             <Route path="/non-teaching" element={<NonTeaching />} />
-            <Route path="/forum/arts" element={<Arts />} />
-            <Route path="/forum/commerce" element={<Commerce />} />
-            <Route path="/forum/science" element={<Science />} />
+            <Route path="/arts" element={<Arts />} />
+            <Route path="/commerce" element={<Commerce />} />
+            <Route path="/science" element={<Science />} />
             <Route path="/nss" element={<Nss />} />
             <Route path="/scholarship" element={<Scholarship />} />
             <Route path="/rank-holders" element={<RankHolders />} />

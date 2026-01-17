@@ -1,17 +1,30 @@
 import React from 'react';
+import imgLibrary from '../assets/lib1.jpg';
+import imgLaboratory1 from '../assets/lab.jpg';
+import imgLaboratory2 from '../assets/lab.jpg';
+import imgComputerLab from '../assets/lib.jpg';  
 
 const Facilities = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div>
+      {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">Facilities</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+        
+      <div className="container mx-auto px-4 py-8"> 
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-4xl font-bold text-accent mb-8 text-center">Facilities Available</h1>
+
+
+     
 
         {/* Library Section */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <div className="flex items-center justify-center mb-6">
-            <div className="bg-gray-200 w-64 h-48 flex items-center justify-center rounded-lg">
-              <span className="text-gray-500">Library Image</span>
-            </div>
+            <img src={imgLibrary} alt="Library" className="rounded-lg shadow-md w-full max-w-2xl" />  
           </div>
 
           <h2 className="text-3xl font-bold text-accent mb-6">LIBRARY</h2>
@@ -40,12 +53,9 @@ const Facilities = () => {
           <h2 className="text-3xl font-bold text-accent mb-6">LABORATORIES</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="bg-gray-200 h-48 flex items-center justify-center rounded-lg">
-              <span className="text-gray-500">Lab Image 1</span>
-            </div>
-            <div className="bg-gray-200 h-48 flex items-center justify-center rounded-lg">
-              <span className="text-gray-500">Lab Image 2</span>
-            </div>
+           
+           <img src={imgLaboratory1} alt="Laboratory 1" className="rounded-lg shadow-md w-full" />
+           
           </div>
 
           <p className="text-gray-700 leading-relaxed mb-4">
@@ -61,9 +71,7 @@ const Facilities = () => {
           <h2 className="text-3xl font-bold text-accent mb-6">COMPUTER LAB</h2>
           
           <div className="flex items-center justify-center mb-6">
-            <div className="bg-gray-200 w-full h-64 flex items-center justify-center rounded-lg">
-              <span className="text-gray-500">Computer Lab Image</span>
-            </div>
+           <img src={imgComputerLab} alt="Computer Lab" className="rounded-lg shadow-md w-full max-w-2xl" />
           </div>
 
           <p className="text-gray-700 leading-relaxed">
@@ -104,6 +112,7 @@ const Facilities = () => {
             </p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

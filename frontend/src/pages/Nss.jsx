@@ -1,7 +1,23 @@
 import React from 'react';
+import imgNssLogo from '../assets/nss.jpg';
+import imgActivity1 from '../assets/nss1.jpg';
+import imgActivity2 from '../assets/nss2.jpg';
+import imgActivity3 from '../assets/mnss.jpg';
+
 
 const Nss = () => {
   return (
+
+ <div>
+ {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">  National Service Scheme (NSS)</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+    
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-accent mb-8 text-center">
@@ -11,9 +27,7 @@ const Nss = () => {
         {/* NSS Logo and Header */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="bg-gray-200 w-48 h-48 rounded-full flex items-center justify-center">
-              <span className="text-gray-500">NSS Logo</span>
-            </div>
+           <img src={imgNssLogo} alt="NSS Logo" className="w-32 h-32" />
             <div className="flex-1">
               <h2 className="text-3xl font-bold text-primary mb-4">About NSS</h2>
               <p className="text-gray-700 leading-relaxed">
@@ -72,18 +86,14 @@ const Nss = () => {
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-accent mb-6 text-center">NSS Activities</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Community Service Photo</span>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Village Camp Photo</span>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Awareness Program Photo</span>
-            </div>
-            <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Tree Plantation Photo</span>
-            </div>
+          <img src={imgActivity1} alt="NSS Activity 1" className="rounded-lg shadow-md w-full " />
+          <img src={imgActivity2} alt="NSS Activity 2" className="rounded-lg shadow-md w-full " />
+         
+          </div>
+
+          <div className="grid my-4 grid-cols-1  gap-6">
+         
+          <img src={imgActivity3} alt="NSS Activity 3" className="rounded-lg shadow-md w-full" />
           </div>
         </div>
 
@@ -105,6 +115,7 @@ const Nss = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

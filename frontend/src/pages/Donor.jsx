@@ -1,17 +1,27 @@
 import React from 'react';
+import imgDonor from '../assets/donars.jpg';
 
 const Donor = () => {
   return (
+    <div>
+
+    {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">College Donor</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-accent mb-8 text-center">College Donor</h1>
+       
 
         <div className="bg-white rounded-lg shadow-lg p-8">
           {/* Donor Photo */}
           <div className="flex justify-center mb-8">
-            <div className="bg-gray-200 w-96 h-80 flex items-center justify-center rounded-lg">
-              <span className="text-gray-500">Donor's Photo</span>
-            </div>
+           <img src={imgDonor} alt="Donor" className="rounded-lg shadow-md w-64" /> 
           </div>
 
           {/* Donor Information */}
@@ -71,6 +81,8 @@ const Donor = () => {
           </div>
         </div>
       </div>
+    </div>
+
     </div>
   );
 };

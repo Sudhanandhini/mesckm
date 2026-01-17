@@ -1,18 +1,26 @@
 import React from 'react';
+import imgPrincipal from '../assets/principal01.jpg';
 
 const About = () => {
   return (
+    <div>
+ {/* Hero */}
+      <div className="bg-gradient-to-r from-primary to-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fadeIn">About Us</h1>
+          <p className="text-xl animate-fadeIn delay-1">Dedicated educators committed to excellence</p>
+        </div>
+      </div>
+
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-accent mb-8 text-center">About us</h1>
+      
 
         {/* Principal's Desk Section */}
         <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="w-full md:w-1/3">
-              <div className="bg-gray-200 h-64 flex items-center justify-center rounded-lg">
-                <span className="text-gray-500">Principal's Photo</span>
-              </div>
+             <img src={imgPrincipal} alt="Principal" className="rounded-lg shadow-md w-full" /> 
             </div>
             <div className="w-full md:w-2/3">
               <h2 className="text-3xl font-bold text-accent mb-4">PRINCIPAL'S DESK</h2>
@@ -85,6 +93,8 @@ const About = () => {
           </div>
         </div>
       </div>
+    </div>
+
     </div>
   );
 };
