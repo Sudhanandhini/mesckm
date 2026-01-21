@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#990c28', // Brown/olive gold from the website
-        secondary: '#fffbeb',
-        accent: '#990c28', // Red for headings
-        gold: '#fffbeb',
+       primary: '#990c28',      // Maroon (unchanged)
+  secondary: '#facc15',    // Dark blue-gray
+  accent: '#facc15',       // Teal - modern, energetic
+  gold: '#facc15',         // Amber gold
       },
     },
   },

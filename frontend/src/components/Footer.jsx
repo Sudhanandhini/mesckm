@@ -1,98 +1,342 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  MapPin, 
+  Phone, 
+  Mail, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram,
+  ArrowRight,
+  Heart,
+  Sparkles
+} from 'lucide-react';
 
 const Footer = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+  };
+
+  const socialLinks = [
+    { icon: Facebook, href: '#', color: 'hover:bg-blue-600' },
+    { icon: Twitter, href: '#', color: 'hover:bg-sky-500' },
+    { icon: Linkedin, href: '#', color: 'hover:bg-blue-700' },
+    { icon: Instagram, href: '#', color: 'hover:bg-pink-600' }
+  ];
+
+  const quickLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/about', label: 'About Company' },
+    { to: '/donor', label: 'Donor' },
+    { to: '/course-regulations', label: 'Course Regulations' },
+    { to: '/faculty', label: 'Faculty' },
+    { to: '/non-teaching', label: 'Non-Teaching' },
+    { to: '/nss', label: 'NSS' },
+    { to: '/scholarship', label: 'Scholarship' }
+  ];
+
+  const services = [
+    { to: '/facilities', label: 'Facilities' },
+    { to: '/library', label: 'Library' },
+    { to: '/laboratories', label: 'Laboratories' },
+    { to: '/arts', label: 'Arts Forum' },
+    { to: '/commerce', label: 'Commerce Forum' },
+    { to: '/science', label: 'Science Forum' },
+    { to: '/rank-holders', label: 'Rank Holders' },
+    { to: '/yoga-wellness', label: 'Yoga Wellness Centre' }
+  ];
+
   return (
-    <footer className="bg-gradient-to-r from-primary to-primary text-white mt-auto text-gold">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative bg-gradient-to-br from-[#990c28] via-[#990c28] to-[#990c28] text-white mt-auto overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.2, 1],
+            rotate: [0, 90, 0],
+            opacity: [0.05, 0.1, 0.05]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-0 right-0 w-96 h-96 bg-[#facc15] rounded-full blur-3xl"
+        />
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.3, 1],
+            rotate: [0, -90, 0],
+            opacity: [0.05, 0.1, 0.05]
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"
+        />
+      </div>
+
+      <div className="relative container mx-auto px-4 py-12">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-4 gap-8"
+        >
           {/* College Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Malnad Education Society (R)</h3>
-            <p className="text-sm mb-4 leading-relaxed">
+          <motion.div variants={itemVariants}>
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring", stiffness: 200 }}
+              className="inline-flex items-center gap-2 mb-4"
+            >
+              <div className="w-10 h-10 bg-[#facc15] rounded-lg flex items-center justify-center">
+                <Sparkles className="w-6 h-6 text-[#990c28]" />
+              </div>
+            </motion.div>
+            
+            <h3 className="text-xl font-bold mb-4 text-[#facc15]">
+              Malnad Education Society (R)
+            </h3>
+            <p className="text-sm mb-4 leading-relaxed text-gray-300">
               MES M.S. Padmavathamma M.K. Sambasiva Setty College For Women, Chikmagalur - 01
             </p>
-            <div className="flex space-x-4 mt-4">
-              <a href="#" className="hover:text-gold transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-              <a href="#" className="hover:text-gold transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-              </a>
-              <a href="#" className="hover:text-gold transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-              </a>
-              <a href="#" className="hover:text-gold transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
+            
+            {/* Social Links */}
+            <div className="flex space-x-3 mt-6">
+              {socialLinks.map((social, idx) => (
+                <motion.a
+                  key={idx}
+                  href={social.href}
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                  className={`w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center ${social.color} transition-all duration-300 border border-white/20`}
+                >
+                  <social.icon className="w-5 h-5" />
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-gold">Quick Links</h3>
+          <motion.div variants={itemVariants}>
+            <h3 className="text-xl font-bold mb-4 text-[#facc15] flex items-center gap-2">
+              <ArrowRight className="w-5 h-5" />
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/" className="hover:text-gold transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-gold transition-colors">About Company</Link></li>
-              <li><Link to="/donor" className="hover:text-gold transition-colors">Donor</Link></li>
-              <li><Link to="/course-regulations" className="hover:text-gold transition-colors">Course Regulations</Link></li>
-              <li><Link to="/faculty" className="hover:text-gold transition-colors">Faculty</Link></li>
-              <li><Link to="/non-teaching" className="hover:text-gold transition-colors">Non-Teaching</Link></li>
-              <li><Link to="/nss" className="hover:text-gold transition-colors">NSS</Link></li>
-              <li><Link to="/scholarship" className="hover:text-gold transition-colors">Scholarship</Link></li>
+              {quickLinks.map((link, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                >
+                  <Link 
+                    to={link.to} 
+                    className="group flex items-center gap-2 text-gray-300 hover:text-[#facc15] transition-all duration-300"
+                  >
+                    <motion.span
+                      className="w-0 h-0.5 bg-[#facc15] group-hover:w-4 transition-all duration-300"
+                    />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      {link.label}
+                    </span>
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-gold">Services</h3>
+          <motion.div variants={itemVariants}>
+            <h3 className="text-xl font-bold mb-4 text-[#facc15] flex items-center gap-2">
+              <ArrowRight className="w-5 h-5" />
+              Services
+            </h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/facilities" className="hover:text-gold transition-colors">Facilities</Link></li>
-              <li><Link to="/facilities/library" className="hover:text-gold transition-colors">Library</Link></li>
-              <li><Link to="/facilities/laboratories" className="hover:text-gold transition-colors">Laboratories</Link></li>
-              <li><Link to="/forum/arts" className="hover:text-gold transition-colors">Arts Forum</Link></li>
-              <li><Link to="/forum/commerce" className="hover:text-gold transition-colors">Commerce Forum</Link></li>
-              <li><Link to="/forum/science" className="hover:text-gold transition-colors">Science Forum</Link></li>
-              <li><Link to="/rank-holders" className="hover:text-gold transition-colors">Rank Holders</Link></li>
-              <li><Link to="/yoga-wellness" className="hover:text-gold transition-colors">Yoga Wellness Centre</Link></li>
+              {services.map((service, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                >
+                  <Link 
+                    to={service.to} 
+                    className="group flex items-center gap-2 text-gray-300 hover:text-[#facc15] transition-all duration-300"
+                  >
+                    <motion.span
+                      className="w-0 h-0.5 bg-[#facc15] group-hover:w-4 transition-all duration-300"
+                    />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      {service.label}
+                    </span>
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 text-gold">Contact Info</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start space-x-2">
-                <span className="text-gold">📍</span>
+          <motion.div variants={itemVariants}>
+            <h3 className="text-xl font-bold mb-4 text-[#facc15] flex items-center gap-2">
+              <ArrowRight className="w-5 h-5" />
+              Contact Info
+            </h3>
+            <ul className="space-y-4 text-sm">
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-start space-x-3 text-gray-300 hover:text-white transition-all duration-300"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-8 h-8 bg-[#facc15]/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                >
+                  <MapPin className="w-4 h-4 text-[#facc15]" />
+                </motion.div>
                 <span>R.G. Road, Chikmagalur - 577 101, Karnataka, India</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-gold">📞</span>
-                <span>+91-8262-236212</span>
-              </li>
-              <li className="flex items-center space-x-2">
-                <span className="text-gold">📧</span>
-                <span>hello@mesckm.edu.in</span>
-              </li>
+              </motion.li>
+              
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-8 h-8 bg-[#facc15]/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <Phone className="w-4 h-4 text-[#facc15]" />
+                </motion.div>
+                <a href="tel:+918262236212" className="hover:text-[#facc15] transition-colors">
+                  +91-8262-236212
+                </a>
+              </motion.li>
+              
+              <motion.li
+                whileHover={{ x: 5 }}
+                className="flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="w-8 h-8 bg-[#facc15]/20 rounded-lg flex items-center justify-center flex-shrink-0"
+                >
+                  <Mail className="w-4 h-4 text-[#facc15]" />
+                </motion.div>
+                <a href="mailto:hello@mesckm.edu.in" className="hover:text-[#facc15] transition-colors">
+                  hello@mesckm.edu.in
+                </a>
+              </motion.li>
             </ul>
-          </div>
-        </div>
+
+            {/* Newsletter Box */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
+            >
+              <p className="text-xs text-gray-300 mb-2">Subscribe to our newsletter</p>
+              <div className="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="flex-1 px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#facc15]"
+                />
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-4 py-2 bg-[#facc15] text-[#990c28] rounded-lg font-semibold text-sm hover:bg-yellow-500 transition-colors"
+                >
+                  →
+                </motion.button>
+              </div>
+            </motion.div> */}
+          </motion.div>
+        </motion.div>
 
         {/* Bottom Copyright Bar */}
-        <div className="border-t border-gold mt-8 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>© Malnad Education Society 2026 | All Rights Reserved</p>
-          <p className="mt-2 md:mt-0">
-            Developed by: <span className="text-gold font-semibold">Sunsys Technologies</span>
-          </p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="relative border-t border-[#facc15]/30 mt-12 pt-8"
+        >
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm gap-4">
+            <motion.p
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-gray-300 flex items-center gap-2"
+            >
+              <span>© Malnad Education Society 2026</span>
+              <span className="text-[#facc15]">|</span>
+              <span>All Rights Reserved</span>
+            </motion.p>
+            
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-gray-300 flex items-center gap-2"
+            >
+              <span>Made with</span>
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+              >
+                <Heart className="w-4 h-4 text-red-500 fill-current" />
+              </motion.span>
+              <span>by</span>
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                className="text-[#facc15] font-semibold"
+              >
+                Sunsys Technologies
+              </motion.span>
+            </motion.p>
+          </div>
+
+          {/* Back to Top Button */}
+          <motion.button
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="absolute -top-6 right-4 w-12 h-12 bg-[#facc15] text-[#990c28] rounded-full flex items-center justify-center shadow-2xl hover:shadow-[#facc15]/50 transition-all duration-300"
+          >
+            <motion.div
+              animate={{ y: [0, -3, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+            >
+              ↑
+            </motion.div>
+          </motion.button>
+        </motion.div>
+
+        {/* Decorative Elements */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#facc15] to-transparent"
+        />
       </div>
     </footer>
   );

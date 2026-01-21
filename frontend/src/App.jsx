@@ -24,12 +24,19 @@ import Laboratories from './pages/Laboratories';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/mesckm">
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
+
         <main className="flex-grow">
           <Routes>
+
+            {/* 👇 FIX: This makes the home page visible */}
+            <Route index element={<Home />} />
+
+            {/* Optional: You can keep this or remove it */}
             <Route path="/" element={<Home />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/donor" element={<Donor />} />
             <Route path="/course-regulations" element={<CourseRegulations />} />
@@ -50,6 +57,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
+
         <Footer />
       </div>
     </Router>
