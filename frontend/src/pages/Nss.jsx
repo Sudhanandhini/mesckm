@@ -43,19 +43,19 @@ const Nss = () => {
       icon: Calendar, 
       title: 'Regular Activities', 
       desc: 'Community service, awareness programs, and social welfare activities',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-[#990c28] to-[#c41537]'
     },
     { 
       icon: Home, 
       title: 'Special Camps', 
       desc: '7-day residential camps in adopted villages for intensive community work',
-      color: 'from-green-500 to-green-600'
+      color: 'from-[#facc15] to-yellow-600'
     },
     { 
       icon: Globe, 
       title: 'National Events', 
       desc: 'Participation in national integration camps and youth festivals',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-[#990c28] to-[#c41537]'
     }
   ];
 

@@ -101,10 +101,10 @@ const Scholarship = () => {
   ];
 
   const stats = [
-    { icon: Users, number: '100+', label: 'Students Benefited Annually', color: 'from-green-500 to-green-600' },
-    { icon: Award, number: '12+', label: 'Scholarship Programs', color: 'from-blue-500 to-blue-600' },
-    { icon: DollarSign, number: '₹10L+', label: 'Total Aid Distributed', color: 'from-purple-500 to-purple-600' },
-    { icon: TrendingUp, number: '100%', label: 'Support Assistance', color: 'from-orange-500 to-orange-600' }
+    { icon: Users, number: '100+', label: 'Students Benefited Annually', color: 'from-[#990c28] to-[#c41537]' },
+    { icon: Award, number: '12+', label: 'Scholarship Programs', color: 'from-[#facc15] to-yellow-600' },
+    { icon: DollarSign, number: '₹10L+', label: 'Total Aid Distributed', color: 'from-[#990c28] to-[#c41537]' },
+    { icon: TrendingUp, number: '100%', label: 'Support Assistance', color: 'from-[#facc15] to-yellow-600' }
   ];
 
   const applicationSteps = [
@@ -436,7 +436,7 @@ const Scholarship = () => {
                       {scholarship.name}
                     </h3>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      <CheckCircle className="w-4 h-4 text-yellow-500" />
                       <span>Available for eligible students</span>
                     </div>
                   </div>
@@ -614,11 +614,11 @@ const Scholarship = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 shadow-xl border-t-4 border-blue-500"
+              className="bg-gradient-to-br from-[#990c28]/5 to-white rounded-3xl p-8 shadow-xl border-t-4 border-[#990c28]"
             >
               <div className="flex items-center gap-4 mb-6">
-                <Target className="w-12 h-12 text-blue-600" />
-                <h3 className="text-2xl font-bold text-blue-900">Eligibility</h3>
+                <Target className="w-12 h-12 text-[#facc15]" />
+                <h3 className="text-2xl font-bold text-[#990c28]">Eligibility</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
                 Students meeting the specific criteria of each scholarship program can apply. 
@@ -626,15 +626,15 @@ const Scholarship = () => {
               </p>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-[#facc15] flex-shrink-0 mt-1" />
                   <span>Academic performance requirements</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-[#facc15] flex-shrink-0 mt-1" />
                   <span>Category-specific criteria</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-5 h-5 text-[#facc15] flex-shrink-0 mt-1" />
                   <span>Income certificate requirements</span>
                 </li>
               </ul>
@@ -705,7 +705,7 @@ const Scholarship = () => {
                   whileHover={{ scale: 1.05, x: 10 }}
                   className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#990c28] to-[#c41537] rounded-xl flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -718,7 +718,7 @@ const Scholarship = () => {
                   whileHover={{ scale: 1.05, x: 10 }}
                   className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#990c28] to-[#c41537] rounded-xl flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -731,7 +731,7 @@ const Scholarship = () => {
                   whileHover={{ scale: 1.05, x: 10 }}
                   className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-md"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#990c28] to-[#c41537] rounded-xl flex items-center justify-center">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>

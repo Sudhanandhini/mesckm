@@ -1192,7 +1192,7 @@ const Home = () => {
               
               <motion.div
                 whileHover={{ scale: 1.05, rotate: -2 }}
-                className="bg-blue-100 p-6 rounded-xl text-center shadow-lg"
+                className="bg-orange-100 p-6 rounded-xl text-center shadow-lg"
               >
                 <motion.div
                   animate={floatingAnimation}

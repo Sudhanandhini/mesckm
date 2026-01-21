@@ -64,21 +64,21 @@ const YogaWellness = () => {
       title: 'Regular Classes',
       description: 'Daily yoga sessions for students and community members focusing on various asanas and pranayama.',
       timing: 'Morning & Evening Batches',
-      color: 'from-orange-500 to-orange-600'
+      color: 'from-[#990c28] to-[#c41537]'
     },
     {
       icon: Award,
       title: 'Special Workshops',
       description: 'Periodic workshops on specific yoga techniques, meditation, and stress management.',
       timing: 'Weekend Programs',
-      color: 'from-green-500 to-green-600'
+      color: 'from-[#facc15] to-yellow-600'
     },
     {
       icon: Users,
       title: 'Certification Courses',
       description: 'Professional yoga training programs leading to certification from MDNIY, New Delhi.',
       timing: '3-6 Month Courses',
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-[#990c28] to-[#c41537]'
     }
   ];
 
@@ -210,14 +210,14 @@ const YogaWellness = () => {
                   <div className="text-sm opacity-90">Established</div>
                 </div>
               </div>
-              <div className="flex items-center gap-4 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-4 text-white">
+              <div className="flex items-center gap-4 bg-gradient-to-br from-[#facc15] to-yellow-600 rounded-2xl p-4 text-white">
                 <Users className="w-10 h-10" />
                 <div>
                   <div className="text-3xl font-bold">2</div>
                   <div className="text-sm opacity-90">Trained Staff</div>
                 </div>
               </div>
-              <div className="flex items-center gap-4 bg-gradient-to-br from-[#facc15] to-yellow-600 rounded-2xl p-4 text-white">
+              <div className="flex items-center gap-4 bg-gradient-to-br from-[#990c28] to-[#c41537] rounded-2xl p-4 text-white">
                 <Award className="w-10 h-10" />
                 <div>
                   <div className="text-3xl font-bold">#1</div>
@@ -310,7 +310,7 @@ const YogaWellness = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="relative bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 text-white shadow-2xl overflow-hidden group"
+              className="relative bg-gradient-to-br from-[#facc15] to-yellow-600 rounded-3xl p-8 text-white shadow-2xl overflow-hidden group"
             >
               <motion.div
                 className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500"
@@ -323,7 +323,7 @@ const YogaWellness = () => {
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center"
                   >
-                    <Brain className="w-8 h-8 text-green-600" />
+                    <Brain className="w-8 h-8 text-[#facc15]" />
                   </motion.div>
                   <h3 className="text-3xl font-bold">Mental Benefits</h3>
                 </div>
@@ -643,23 +643,23 @@ const YogaWellness = () => {
                   <div className="space-y-4">
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-center gap-3 bg-green-50 rounded-xl p-4"
+                      className="flex items-center gap-3 bg-[#990c28]/5 rounded-xl p-4"
                     >
-                      <CheckCircle className="w-6 h-6 text-green-600" />
+                      <CheckCircle className="w-6 h-6 text-[#990c28]" />
                       <span className="text-gray-700">Free Trial Session Available</span>
                     </motion.div>
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-center gap-3 bg-blue-50 rounded-xl p-4"
+                      className="flex items-center gap-3 bg-[#990c28]/5 rounded-xl p-4"
                     >
-                      <CheckCircle className="w-6 h-6 text-blue-600" />
+                      <CheckCircle className="w-6 h-6 text-[#990c28]" />
                       <span className="text-gray-700">Flexible Batch Timings</span>
                     </motion.div>
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className="flex items-center gap-3 bg-purple-50 rounded-xl p-4"
+                      className="flex items-center gap-3 bg-[#990c28]/5 rounded-xl p-4"
                     >
-                      <CheckCircle className="w-6 h-6 text-purple-600" />
+                      <CheckCircle className="w-6 h-6 text-[#990c28]" />
                       <span className="text-gray-700">Certified Instructors</span>
                     </motion.div>
                   </div>
