@@ -220,8 +220,8 @@ const Footer = () => {
                 >
                   <Phone className="w-4 h-4 text-[#facc15]" />
                 </motion.div>
-                <a href="tel:+918262236212" className="hover:text-[#facc15] transition-colors">
-                  +91-8262-236212
+                <a href="tel:+9108262233973" className="hover:text-[#facc15] transition-colors">
+                  91-08262-233973
                 </a>
               </motion.li>
               
@@ -236,8 +236,8 @@ const Footer = () => {
                 >
                   <Mail className="w-4 h-4 text-[#facc15]" />
                 </motion.div>
-                <a href="mailto:hello@mesckm.edu.in" className="hover:text-[#facc15] transition-colors">
-                  hello@mesckm.edu.in
+                <a href="mailto:mesmspsckm@gmail.com" className="hover:text-[#facc15] transition-colors">
+                  mesmspsckm@gmail.com
                 </a>
               </motion.li>
             </ul>
@@ -312,7 +312,7 @@ const Footer = () => {
           </div>
 
           {/* Back to Top Button */}
-          <motion.button
+          {/* <motion.button
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -327,7 +327,7 @@ const Footer = () => {
             >
               ↑
             </motion.div>
-          </motion.button>
+          </motion.button> */}
         </motion.div>
 
         {/* Decorative Elements */}

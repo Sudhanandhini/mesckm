@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const RankHolders = () => {
   const ugRankHolders2022 = [
     {

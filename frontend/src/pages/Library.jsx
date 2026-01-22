@@ -33,7 +33,7 @@ import {
   FileText,
   Download
 } from 'lucide-react';
-
+import ScrollToTop from '../components/ScrollToTop';
 const Library = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -858,6 +858,8 @@ const Library = () => {
           </motion.div>
         </div>
       </section>
+
+        <ScrollToTop />
     </div>
   );
 };

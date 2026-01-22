@@ -26,6 +26,7 @@ import imgNssLogo from '../assets/nss.jpg';
 import imgActivity1 from '../assets/nss1.jpg';
 import imgActivity2 from '../assets/nss2.jpg';
 import imgActivity3 from '../assets/mnss.jpg';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Nss = () => {
   const objectives = [
@@ -798,6 +799,7 @@ const Nss = () => {
           </motion.div>
         </div>
       </section>
+        <ScrollToTop />
     </div>
   );
 };

@@ -39,6 +39,7 @@ import {
   Leaf,
   Lightbulb
 } from 'lucide-react';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Facilities = () => {
   const containerVariants = {
@@ -657,6 +658,8 @@ const Facilities = () => {
           </motion.div>
         </div>
       </section>
+<ScrollToTop />
+
     </div>
   );
 };

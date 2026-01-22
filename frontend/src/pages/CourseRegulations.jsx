@@ -25,6 +25,8 @@ import {
 } from 'lucide-react';
 import imgPrincipal from '../assets/principal01.jpg';
 
+import ScrollToTop from '../components/ScrollToTop';
+
 const CourseRegulations = () => {
   const courses = [
     { 
@@ -797,6 +799,9 @@ const CourseRegulations = () => {
           </motion.div>
         </div>
       </section>
+
+  <ScrollToTop />
+
     </div>
   );
 };

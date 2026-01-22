@@ -20,7 +20,7 @@ import {
   TrendingUp,
   Star
 } from 'lucide-react';
-
+import ScrollToTop from '../components/ScrollToTop';
 import img1 from "../assets/n2.jpg"
 import img2 from "../assets/n3.jpg"
 import img3 from "../assets/73.jpg"
@@ -791,6 +791,7 @@ const NonTeaching = () => {
           </motion.div>
         </div>
       </section>
+        <ScrollToTop />
     </div>
   );
 };

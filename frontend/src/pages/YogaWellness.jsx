@@ -29,6 +29,7 @@ import {
   Flower2,
   Leaf
 } from 'lucide-react';
+import ScrollToTop from '../components/ScrollToTop';
 
 const YogaWellness = () => {
   const containerVariants = {
@@ -685,6 +686,7 @@ const YogaWellness = () => {
           </motion.div>
         </div>
       </section>
+        <ScrollToTop />
     </div>
   );
 };

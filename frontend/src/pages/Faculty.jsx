@@ -25,6 +25,7 @@ import {
   Eye,
   Crown
 } from 'lucide-react';
+import ScrollToTop from '../components/ScrollToTop';
 
 import img1 from "../assets/teaching/36.jpg"
 import img2 from "../assets/teaching/37.jpg"
@@ -615,6 +616,7 @@ const Faculty = () => {
           </motion.div>
         </div>
       </section>
+      <ScrollToTop />
     </div>
   );
 };

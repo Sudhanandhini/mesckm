@@ -21,6 +21,7 @@ import {
   ArrowRight,
   HelpCircle
 } from 'lucide-react';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -764,6 +765,9 @@ const Contact = () => {
           </motion.div>
         </div>
       </section>
+
+  <ScrollToTop />
+
     </div>
   );
 };

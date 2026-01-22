@@ -34,6 +34,8 @@ import {
   Compass
 } from 'lucide-react';
 
+import ScrollToTop from '../components/ScrollToTop';
+
 const Arts = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -854,6 +856,8 @@ const Arts = () => {
           </motion.div>
         </div>
       </section>
+
+        <ScrollToTop />
     </div>
   );
 };

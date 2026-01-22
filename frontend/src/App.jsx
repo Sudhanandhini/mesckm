@@ -22,6 +22,8 @@ import Contact from './pages/Contact';
 import Library from './pages/Library';
 import Laboratories from './pages/Laboratories';
 
+import ScrollToTop from './components/ScrollToTop';
+
 function App() {
   return (
     <Router basename="/mesckm">
@@ -55,10 +57,15 @@ function App() {
             <Route path="/rank-holders/pg" element={<RankHolders />} />
             <Route path="/yoga-wellness" element={<YogaWellness />} />
             <Route path="/contact" element={<Contact />} />
+
+
           </Routes>
         </main>
 
         <Footer />
+
+<ScrollToTop />
+
       </div>
     </Router>
   );

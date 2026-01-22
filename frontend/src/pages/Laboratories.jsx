@@ -34,6 +34,7 @@ import {
   MapPin,
   Activity
 } from 'lucide-react';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Laboratories = () => {
   const containerVariants = {
@@ -717,6 +718,9 @@ const Laboratories = () => {
           </motion.div>
         </div>
       </section>
+
+  <ScrollToTop />
+
     </div>
   );
 };

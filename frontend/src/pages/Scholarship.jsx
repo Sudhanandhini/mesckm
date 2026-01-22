@@ -23,6 +23,7 @@ import {
   Briefcase
 } from 'lucide-react';
 import imgScholarship from '../assets/scholar.jpg';
+import ScrollToTop from '../components/ScrollToTop';
 
 const Scholarship = () => {
   const scholarships = [
@@ -813,6 +814,8 @@ const Scholarship = () => {
           </motion.div>
         </div>
       </section>
+  <ScrollToTop />
+
     </div>
   );
 };

@@ -20,6 +20,8 @@ import {
 import imgPrincipal from '../assets/principal01.jpg';
 import im from '../assets/im.jpg';
 
+import ScrollToTop from '../components/ScrollToTop';
+
 const About = () => {
   const achievements = [
     { icon: Trophy, title: '100% Results', desc: 'Consistent academic excellence over 40 years' },
@@ -688,6 +690,10 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+
+  <ScrollToTop />
+
+
     </div>
   );
 };

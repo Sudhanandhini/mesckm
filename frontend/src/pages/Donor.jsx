@@ -18,6 +18,10 @@ import {
 } from 'lucide-react';
 import imgDonor from '../assets/donars.jpg';
 
+import img from '../assets/im.jpg';
+
+import ScrollToTop from '../components/ScrollToTop';
+
 const Donor = () => {
   const achievements = [
     { icon: Gift, number: '₹4M+', label: 'Total Donations', color: 'from-[#990c28] to-[#c41537]' },
@@ -177,7 +181,7 @@ const Donor = () => {
                 <img 
                   src={imgDonor}
                   alt="Donor" 
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[600px] object-contain"
                 />
                 
                 {/* Yellow Accent Strip */}
@@ -586,7 +590,7 @@ const Donor = () => {
                 className="relative rounded-2xl overflow-hidden shadow-lg h-64"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600" 
+                  src={img} 
                   alt="Students"
                   className="w-full h-full object-cover"
                 />
@@ -679,6 +683,8 @@ const Donor = () => {
           </motion.div>
         </div>
       </section>
+  <ScrollToTop />
+
     </div>
   );
 };

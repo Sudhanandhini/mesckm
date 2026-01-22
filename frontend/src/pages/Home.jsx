@@ -19,6 +19,8 @@ import {
 } from 'lucide-react';
 import img from '../assets/img.jpg';
 
+import ScrollToTop from '../components/ScrollToTop';
+
 const Home = () => {
   const [isVisible, setIsVisible] = useState({});
   const [activeTab, setActiveTab] = useState('mission');
@@ -1317,6 +1319,10 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+
+<ScrollToTop />
+
     </div>
   );
 };
