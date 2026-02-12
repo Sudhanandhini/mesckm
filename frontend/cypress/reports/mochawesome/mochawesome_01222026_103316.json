@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-01-22T05:03:16.828Z",
+    "end": "2026-01-22T05:03:16.981Z",
+    "duration": 153,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d27b3ae4-8eb1-4b72-a2b5-36469488da52",
+      "title": "",
+      "fullFile": "cypress\\e2e\\00-test-summary.cy.js",
+      "file": "cypress\\e2e\\00-test-summary.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c1cce12-e42c-4bd2-9642-25b128a3fd72",
+          "title": "Complete Test Suite Summary",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should run all comprehensive tests",
+              "fullTitle": "Complete Test Suite Summary should run all comprehensive tests",
+              "timedOut": null,
+              "duration": 45,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('✅ All Routes and Pages Tests');\ncy.log('✅ Complete Navigation Tests');\ncy.log('✅ Image Loading Tests');\ncy.log('✅ All Links Validation');\ncy.log('✅ Mobile Responsive Tests');\ncy.log('✅ Tablet Responsive Tests');\ncy.log('✅ Desktop Responsive Tests');\ncy.log('✅ Header and Footer Tests');\ncy.log('✅ Accessibility Tests');\ncy.log('✅ Performance Tests');",
+              "err": {},
+              "uuid": "b0af2425-61bc-460c-a682-dd5253db4a51",
+              "parentUUID": "1c1cce12-e42c-4bd2-9642-25b128a3fd72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b0af2425-61bc-460c-a682-dd5253db4a51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 45,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mochawesome",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "charts": true,
+        "reportPageTitle": "MESCKM College - Cypress Test Report",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

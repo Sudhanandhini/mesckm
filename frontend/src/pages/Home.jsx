@@ -19,6 +19,14 @@ import {
 } from 'lucide-react';
 import img from '../assets/img.jpg';
 
+import img1 from '../assets/ban1.jpg';
+import img2 from '../assets/ban2.jpg';
+import img3 from '../assets/ban3.jpg';
+import img4 from '../assets/ban4.jpg';
+import img5 from '../assets/ban5.jpg';
+
+
+
 import ScrollToTop from '../components/ScrollToTop';
 
 const Home = () => {
@@ -142,11 +150,44 @@ const Home = () => {
     transition: { duration: 3, repeat: Infinity, ease: "easeInOut" }
   };
 
+
+
+  const images = [
+   img1, img2, img3, img4, img5
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto Slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Next / Prev
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+
+
+
+
+
+
+
+
   return (
     <div className="overflow-hidden bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#990c28] via-[#b8102f] to-[#990c28] text-white py-32 overflow-hidden ">
-        {/* Animated Background */}
+      {/* <section className="relative bg-gradient-to-br from-[#990c28] via-[#b8102f] to-[#990c28] text-white py-32 overflow-hidden ">
+       
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
@@ -165,7 +206,7 @@ const Home = () => {
           />
         </div>
 
-        {/* Floating Particles */}
+      
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -275,7 +316,164 @@ const Home = () => {
             </motion.div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+
+      
+  <section className="relative h-[90vh] w-full overflow-hidden bg-[#990c28]">
+
+      {/* Background Slider */}
+      <motion.div
+        key={currentIndex}
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="absolute inset-0"
+      >
+        <img
+          src={images[currentIndex]}
+          alt="Hero Slide"
+          className="w-full h-full object-cover opacity-70"
+        />
+      </motion.div>
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
+      {/* Slider Controls */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur p-3 rounded-full"
+      >
+        <ArrowRight className="rotate-180 text-white w-6 h-6" />
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur p-3 rounded-full"
+      >
+        <ArrowRight className="text-white w-6 h-6" />
+      </button>
+
+      {/* Hero Content */}
+    <div className="relative max-w-7xl mx-auto px-4 h-full flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <motion.div
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+              className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-[#facc15] via-yellow-500 to-yellow-600 rounded-3xl mb-6 shadow-2xl relative"
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-3xl border-4 border-dashed border-white opacity-30"
+              />
+              <GraduationCap className="w-12 h-12 text-white relative z-10" />
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="absolute -top-2 -right-2"
+              >
+                <Sparkles className="w-6 h-6 text-[#facc15]" />
+              </motion.div>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="text-5xl md:text-7xl font-bold mb-4"
+            >
+              <span className="bg-gradient-to-r from-white via-[#facc15] to-white bg-clip-text text-transparent">
+                MES College For Women
+              </span>
+            </motion.h1>
+
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+              className="flex items-center justify-center gap-3 mb-6"
+            >
+              <div className="h-1 w-16 bg-[#facc15] rounded-full"></div>
+              <motion.div
+                animate={{ scale: [1, 1.5, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="h-2 w-2 bg-white rounded-full"
+              />
+              <div className="h-1 w-16 bg-[#facc15] rounded-full"></div>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
+            >
+              Empowering Women Through Quality Education Since 1984
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/admissions" className="group relative inline-flex items-center gap-2 bg-[#facc15] hover:bg-yellow-600 text-[#990c28] px-10 py-5 rounded-full font-bold transition-all shadow-2xl overflow-hidden">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <span className="relative z-10">Apply for Admission</span>
+                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/about" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold transition-all border-2 border-white/30">
+                  Learn More
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+         {/* <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.1 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+            >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/admissions" className="group relative inline-flex items-center gap-2 bg-[#facc15] hover:bg-yellow-600 text-[#990c28] px-10 py-5 rounded-full font-bold transition-all shadow-2xl overflow-hidden">
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
+                    transition={{ duration: 0.5 }}
+                  />
+                  <span className="relative z-10">Apply for Admission</span>
+                  <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link to="/about" className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-10 py-5 rounded-full font-bold transition-all border-2 border-white/30">
+                  Learn More
+                </Link>
+              </motion.div>
+            </motion.div> */}
+    </section>
+
+
+      
 
       {/* Stats Section with Counter Animation */}
       <section className="relative -mt-16 z-10 pb-20">
@@ -1319,6 +1517,18 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+
+      
+
+
+
+
+
+
+
+
+
 
 
 <ScrollToTop />

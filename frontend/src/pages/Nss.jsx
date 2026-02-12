@@ -27,6 +27,8 @@ import imgActivity1 from '../assets/nss1.jpg';
 import imgActivity2 from '../assets/nss2.jpg';
 import imgActivity3 from '../assets/mnss.jpg';
 import ScrollToTop from '../components/ScrollToTop';
+import img1 from '../assets/ban2.jpg';
+
 
 const Nss = () => {
   const objectives = [
@@ -104,7 +106,9 @@ const Nss = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#990c28] via-[#b8102f] to-[#990c28] text-white py-32 overflow-hidden ">
+       <section className="relative  text-white py-24 overflow-hidden " 
+       style={{backgroundImage:  `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+     <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 overflow-hidden">
           <motion.div 
             animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}

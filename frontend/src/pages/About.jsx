@@ -20,6 +20,8 @@ import {
 import imgPrincipal from '../assets/principal01.jpg';
 import im from '../assets/im.jpg';
 
+import img1 from '../assets/ban2.jpg';
+
 import ScrollToTop from '../components/ScrollToTop';
 
 const About = () => {
@@ -74,17 +76,21 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section - Exact ICSE Design */}
-      <section className="relative bg-gradient-to-br from-[#990c28] via-[#b8102f] to-[#990c28] text-white py-32 overflow-hidden ">
+      {/* <section className="relative bg-gradient-to-br from-[#990c28] via-[#b8102f] to-[#990c28] text-white py-24 overflow-hidden "> */}
+       <section className="relative  text-white py-24 overflow-hidden " 
+       style={{backgroundImage:  `url(${img1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+     <div className="absolute inset-0 bg-black/50"></div>
+
         <div className="absolute inset-0 overflow-hidden">
           <motion.div 
             animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute top-0 right-0 w-96 h-96 bg-[#facc15] opacity-10 rounded-full blur-3xl"
+            className="absolute top-0 right-0 w-96 h-96 bg-[#000] opacity-0 rounded-full blur-3xl"
           />
           <motion.div 
             animate={{ scale: [1, 1.3, 1], rotate: [0, -90, 0] }}
             transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className="absolute bottom-0 left-0 w-96 h-96 bg-[#facc15] opacity-10 rounded-full blur-3xl"
+            className="absolute bottom-0 left-0 w-96 h-96 bg-[#000] opacity-0 rounded-full blur-3xl"
           />
         </div>
         
