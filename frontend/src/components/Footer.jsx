@@ -206,7 +206,8 @@ const Footer = () => {
                 >
                   <MapPin className="w-4 h-4 text-[#facc15]" />
                 </motion.div>
-                <span>R.G. Road, Chikmagalur - 577 101, Karnataka, India</span>
+                <span>M. S. PADMAVATHAMMA M. K. SAMBASIVA SETTY FIRST GRADE COLLEGE, 
+Rathnagiri Road, Chikmagalur – 577 101. (Karnataka)</span>
               </motion.li>
               
               <motion.li
@@ -220,26 +221,35 @@ const Footer = () => {
                 >
                   <Phone className="w-4 h-4 text-[#facc15]" />
                 </motion.div>
-                <a href="tel:+9108262233973" className="hover:text-[#facc15] transition-colors">
-                  91-08262-233973
+                <a href="tel:08262-200458" className="hover:text-[#facc15] transition-colors">
+                 08262 – 200458,
+                </a><br />
+                <a href="tel:08262-200457" className="hover:text-[#facc15] transition-colors">
+                 08262 – 200457
                 </a>
               </motion.li>
-              
-              <motion.li
-                whileHover={{ x: 5 }}
-                className="flex items-center space-x-3 text-gray-300 hover:text-white transition-all duration-300"
-              >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="w-8 h-8 bg-[#facc15]/20 rounded-lg flex items-center justify-center flex-shrink-0"
-                >
-                  <Mail className="w-4 h-4 text-[#facc15]" />
-                </motion.div>
-                <a href="mailto:mesmspsckm@gmail.com" className="hover:text-[#facc15] transition-colors">
-                  mesmspsckm@gmail.com
-                </a>
-              </motion.li>
+       <motion.li
+  whileHover={{ x: 5 }}
+  className="flex items-start space-x-3 text-gray-300 hover:text-white transition-all duration-300"
+>
+  <motion.div
+    whileHover={{ rotate: 360 }}
+    transition={{ duration: 0.6 }}
+    className="w-8 h-8 bg-[#facc15]/20 rounded-lg flex items-center justify-center flex-shrink-0"
+  >
+    <Mail className="w-4 h-4 text-[#facc15]" />
+  </motion.div>
+
+  <div className="flex flex-col space-y-1">
+    <a href="mailto:mesmspsckm@gmail.com" className="hover:text-[#facc15] transition-colors">
+      mesmspsckm@gmail.com
+    </a>
+
+    <a href="mailto:meschikmagalur@gmail.com" className="hover:text-[#facc15] transition-colors">
+      meschikmagalur@gmail.com
+    </a>
+  </div>
+</motion.li>
             </ul>
 
             {/* Newsletter Box */}
@@ -294,13 +304,13 @@ const Footer = () => {
               viewport={{ once: true }}
               className="text-gray-300 flex items-center gap-2"
             >
-              <span>Made with</span>
-              <motion.span
+              <span>Developed</span>
+              {/* <motion.span
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 1, repeat: Infinity }}
               >
                 <Heart className="w-4 h-4 text-red-500 fill-current" />
-              </motion.span>
+              </motion.span> */}
               <span>by</span>
               <motion.span
                 whileHover={{ scale: 1.05 }}

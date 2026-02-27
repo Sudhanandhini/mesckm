@@ -16,8 +16,8 @@ const Header = () => {
       <div className="bg-primary text-white">
         <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between text-[10px] sm:text-xs md:text-sm">
           <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 mb-2 md:mb-0">
-            <span className="flex items-center">📧 hello@mesckm.edu.in</span>
-            <span className="flex items-center">📞 +91-8262-236212</span>
+            <span className="flex items-center">📧 mesmspsckm@gmail.com</span>
+            <span className="flex items-center">📞 08262 – 200458</span>
           </div>
           <div className="hidden md:flex space-x-3 lg:space-x-4 xl:space-x-6 text-xs lg:text-sm">
             <Link to="/nss" className="hover:text-gold transition-colors">NSS</Link>

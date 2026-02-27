@@ -69,7 +69,7 @@ const Contact = () => {
     { 
       icon: Mail, 
       title: 'Email',
-      content: 'mesmpsckm@gmail.com',
+      content: 'mesmpsckm@gmail.com,  meschikmagalur@gmail.com',
       color: 'from-[#990c28] to-[#c41537]'
     },
     { 
@@ -434,13 +434,13 @@ const Contact = () => {
                   <p>R.G. Road</p>
                   <p>Chikmagalur – 577 101, Karnataka</p>
                   <div className="mt-6 space-y-3 border-t border-white/20 pt-6">
-                    <div className="flex items-center gap-3">
+                    {/* <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5 text-[#facc15]" />
                       <span>91-08262-233973</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5 text-[#facc15]" />
-                      <span>+91 9916283623</span>
+                      <span>91-08262–200458</span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-[#facc15]" />
@@ -468,11 +468,15 @@ const Contact = () => {
                   <div className="mt-6 space-y-3 border-t border-white/20 pt-6">
                     <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5" />
-                      <span>91-08262-236821</span>
+                      <span>08262–200457</span>
                     </div>
-                    <div className="flex items-center gap-3">
+                    {/* <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5" />
                       <span>Fax: 91-08262-220314</span>
+                    </div> */}
+                      <div className="flex items-center gap-3">
+                      <Mail className="w-5 h-5 " />
+                      <span>meschikmagalur@gmail.com</span>
                     </div>
                   </div>
                 </div>

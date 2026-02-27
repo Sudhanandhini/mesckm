@@ -28,36 +28,54 @@ import img1 from '../assets/ban2.jpg';
 import ScrollToTop from '../components/ScrollToTop';
 
 const CourseRegulations = () => {
-  const courses = [
-    { 
-      name: 'Bachelor of Arts (BA)', 
-      icon: '🎨',
-      color: 'from-[#990c28] to-[#c41537]',
-      subjects: ['English', 'History', 'Economics', 'Psychology'],
-      duration: '3 Years'
-    },
-    { 
-      name: 'Bachelor of Commerce (B.Com)', 
-      icon: '💼',
-      color: 'from-[#facc15] to-yellow-600',
-      subjects: ['Accountancy', 'Business Studies', 'Economics', 'Statistics'],
-      duration: '3 Years'
-    },
-    { 
-      name: 'Bachelor of Science (B.Sc)', 
-      icon: '🔬',
-      color: 'from-[#990c28] to-[#c41537]',
-      subjects: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science'],
-      duration: '3 Years'
-    },
-    { 
-      name: 'Bachelor of Business Administration (BBA)', 
-      icon: '📊',
-      color: 'from-[#facc15] to-yellow-600',
-      subjects: ['Management', 'Marketing', 'Finance', 'HR'],
-      duration: '3 Years'
-    }
-  ];
+const courses = [
+  { 
+    name: 'Bachelor of Arts (BA)', 
+    icon: '🎨',
+    color: 'from-[#990c28] to-[#c41537]',
+    subjects: ['English', 'History', 'Economics', 'Psychology'],
+    duration: '3 Years'
+  },
+  { 
+    name: 'Bachelor of Commerce (B.Com)', 
+    icon: '💼',
+    color: 'from-[#facc15] to-yellow-600',
+    subjects: ['Accountancy', 'Business Studies', 'Economics', 'Statistics'],
+    duration: '3 Years'
+  },
+  { 
+    name: 'Bachelor of Science (B.Sc)', 
+    icon: '🔬',
+    color: 'from-[#990c28] to-[#c41537]',
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science'],
+    duration: '3 Years'
+  },
+  { 
+    name: 'Bachelor of Business Administration (BBA)', 
+    icon: '📊',
+    color: 'from-[#facc15] to-yellow-600',
+    subjects: ['Management', 'Marketing', 'Finance', 'HR'],
+    duration: '3 Years'
+  },
+
+  // ✅ Added Courses
+
+  { 
+    name: 'Bachelor of Computer Applications (BCA)', 
+    icon: '💻',
+    color: 'from-[#990c28] to-[#c41537]',
+    subjects: ['Programming', 'Data Structures', 'Database Management', 'Web Development'],
+    duration: '3 Years'
+  },
+  { 
+    name: 'Master of Commerce (M.Com)', 
+    icon: '📚',
+    color: 'from-[#facc15] to-yellow-600',
+    subjects: ['Advanced Accountancy', 'Business Law', 'Financial Management', 'Taxation'],
+    duration: '2 Years'
+  }
+];
+
 
   const bbaHighlights = [
     { icon: Target, title: 'Strategic Decision Making', desc: 'Focus on analytical and strategic thinking' },
