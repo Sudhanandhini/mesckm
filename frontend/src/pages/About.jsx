@@ -17,7 +17,7 @@ import {
   TrendingUp,
   Sparkles
 } from 'lucide-react';
-import imgPrincipal from '../assets/principal01.jpg';
+import imgPrincipal from '../assets/principal-new.jpg';
 import im from '../assets/im.jpg';
 
 import img1 from '../assets/ban2.jpg';
@@ -331,8 +331,9 @@ const About = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#990c28]/80 to-transparent flex items-end p-6">
                   <div className="text-white">
-                    <h3 className="text-2xl font-bold mb-1">Principal</h3>
-                    <p className="text-[#facc15]">MES College For Women</p>
+                    <h3 className="text-2xl font-bold mb-1">Prof.Haseena Banu (MA,M.Phil)</h3>
+                    <h3 className="text-xl font-bold mb-1">Principal</h3>
+                    {/* <p className="text-[#facc15]">MES College For Women</p> */}
                   </div>
                 </div>
               </motion.div>

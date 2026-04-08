@@ -30,11 +30,11 @@ const Header = () => {
       </div>
 
       {/* Logo and Menu */}
-      <div className="bg-white border-b py-3 md:py-4">
+      <div className="border-b py-3 md:py-4">
         <div className="container mx-auto px-4 flex items-center justify-between">
           {/* Logo Left */}
           <div className="flex items-center">
-            <img src={logo} alt="Logo" className="w-[180px] sm:w-[200px] md:w-[220px] lg:w-[250px] h-auto" />
+            <img src={logo} alt="Logo" className="w-[180px] sm:w-[200px] md:w-[220px] lg:w-[300px] h-auto" />
           </div>
 
           {/* Hamburger Menu Button - Mobile */}
