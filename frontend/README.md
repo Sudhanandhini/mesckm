@@ -1,6 +1,6 @@
 # MES College Website
 
-A modern, responsive website for MES M.S. Padmavathamma M.K. Sambasiva Setty First Grade College For Women, built with React, Vite, and Tailwind CSS.
+A modern, responsive website for MES M.S. Padmavathamma M.K. Sambasiva Setty First Grade College , built with React, Vite, and Tailwind CSS.
 
 ## Features
 

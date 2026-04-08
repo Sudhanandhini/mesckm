@@ -430,7 +430,7 @@ const Contact = () => {
                   <h3 className="text-2xl font-bold">College Address</h3>
                 </div>
                 <div className="space-y-3 text-gray-100">
-                  <p className="font-bold text-white">MES M.S. Padmavathamma M.K. Sambasiva Setty College For Women</p>
+                  <p className="font-bold text-white">MES M.S. Padmavathamma M.K. Sambasiva Setty College </p>
                   <p>R.G. Road</p>
                   <p>Chikmagalur – 577 101, Karnataka</p>
                   <div className="mt-6 space-y-3 border-t border-white/20 pt-6">

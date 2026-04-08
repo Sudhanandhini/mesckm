@@ -35,6 +35,7 @@ import {
 } from 'lucide-react';
 import img1 from '../assets/ban2.jpg';
 import ScrollToTop from '../components/ScrollToTop';
+import img2 from '../assets/ban1.jpg';
 
 const Arts = () => {
   const containerVariants = {
@@ -144,7 +145,7 @@ const Arts = () => {
       icon: Theater
     },
     {
-      image: 'https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?w=600',
+      image: img2,
       title: 'Heritage Visits',
       description: 'Regular visits to historical Landmarks, temples, and heritage sites help students understand and appreciate our rich cultural heritage and historical significance.',
       icon: Landmark
@@ -562,7 +563,7 @@ const Arts = () => {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -620,7 +621,7 @@ const Arts = () => {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">

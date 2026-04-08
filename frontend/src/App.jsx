@@ -26,7 +26,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router basename="/mesckm">
+    <Router basename="/">
       <div className="flex flex-col min-h-screen bg-gray-50">
         <Header />
 

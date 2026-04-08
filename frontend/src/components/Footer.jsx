@@ -37,7 +37,7 @@ const Footer = () => {
 
   const quickLinks = [
     { to: '/', label: 'Home' },
-    { to: '/about', label: 'About Company' },
+    { to: '/about', label: 'About' },
     { to: '/donor', label: 'Donor' },
     { to: '/course-regulations', label: 'Course Regulations' },
     { to: '/faculty', label: 'Faculty' },
@@ -107,7 +107,7 @@ const Footer = () => {
               Malnad Education Society (R)
             </h3>
             <p className="text-sm mb-4 leading-relaxed text-gray-300">
-              MES M.S. Padmavathamma M.K. Sambasiva Setty College For Women, Chikmagalur - 01
+              MES M.S. Padmavathamma M.K. Sambasiva Setty College , Chikmagalur - 01
             </p>
             
             {/* Social Links */}

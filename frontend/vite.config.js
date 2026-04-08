@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/mesckm/', // THIS IS THE FIX
+  base: '/', // THIS IS THE FIX
 })

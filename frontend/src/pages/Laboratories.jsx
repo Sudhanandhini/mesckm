@@ -36,6 +36,9 @@ import {
 } from 'lucide-react';
 import ScrollToTop from '../components/ScrollToTop';
 import img1 from '../assets/ban2.jpg';
+import che from '../assets/che.jpg';
+
+
 const Laboratories = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -68,7 +71,7 @@ const Laboratories = () => {
       name: 'Chemistry Laboratory',
       icon: FlaskConical,
       color: 'from-[#990c28] to-[#990c28]',
-      image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600',
+      image: che,
       description: 'Well-ventilated chemistry lab with all necessary chemicals, apparatus, and safety equipment for organic, inorganic, and physical chemistry experiments.',
       facilities: [
         { icon: Shield, text: 'Fume hoods and safety equipment' },

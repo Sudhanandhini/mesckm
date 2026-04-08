@@ -18,13 +18,13 @@ import {
   Phone
 } from 'lucide-react';
 import img from '../assets/img.jpg';
-
+import imgs from "../assets/sport.jpg"
 import img1 from '../assets/ban1.jpg';
 import img2 from '../assets/ban2.jpg';
 import img3 from '../assets/ban3.jpg';
 import img4 from '../assets/ban4.jpg';
 import img5 from '../assets/ban5.jpg';
-
+import learn from '../assets/learn.jpg';
 
 
 import ScrollToTop from '../components/ScrollToTop';
@@ -262,7 +262,7 @@ const Home = () => {
               className="text-5xl md:text-7xl font-bold mb-4"
             >
               <span className="bg-gradient-to-r from-white via-[#facc15] to-white bg-clip-text text-transparent">
-                MES College For Women
+                MES College
               </span>
             </motion.h1>
 
@@ -391,7 +391,7 @@ const Home = () => {
               className="text-5xl md:text-7xl font-bold mb-4"
             >
               <span className="bg-gradient-to-r from-white via-[#facc15] to-white bg-clip-text text-transparent">
-                MES College For Women
+                MES College
               </span>
             </motion.h1>
 
@@ -416,7 +416,7 @@ const Home = () => {
               transition={{ delay: 0.9 }}
               className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed"
             >
-              Empowering Women Through Quality Education Since 1984
+   Shaping Futures Through Excellence in Education
             </motion.p>
 
             <motion.div
@@ -426,14 +426,14 @@ const Home = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link to="/admissions" className="group relative inline-flex items-center gap-2 bg-[#facc15] hover:bg-yellow-600 text-[#990c28] px-10 py-5 rounded-full font-bold transition-all shadow-2xl overflow-hidden">
+                <Link to="/" className="group relative inline-flex items-center gap-2 bg-[#facc15] hover:bg-yellow-600 text-[#990c28] px-10 py-5 rounded-full font-bold transition-all shadow-2xl overflow-hidden">
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-600"
                     initial={{ x: "-100%" }}
                     whileHover={{ x: "100%" }}
                     transition={{ duration: 0.5 }}
                   />
-                  <span className="relative z-10">Apply for Admission</span>
+                  <span className="relative z-10">Open Admission for 2026-27</span>
                   <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -512,7 +512,7 @@ const Home = () => {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src={img} 
+                  src={img3} 
                   alt="Student" 
                   className="w-full h-[500px] object-cover"
                 />
@@ -725,7 +725,7 @@ const Home = () => {
                       transition={{ delay: 0.1 }}
                       className="text-gray-700 leading-relaxed mb-6 text-lg"
                     >
-                      MES M.S. Padmavathamma M.K. Sambasiva Setty College For Women, a pioneer 
+                      MES M.S. Padmavathamma M.K. Sambasiva Setty College , a pioneer 
                       institution of Chikmagalur, came into existence in 1984 with a noble intention 
                       of catering to the needs of women in the field of education.
                     </motion.p>
@@ -780,7 +780,7 @@ const Home = () => {
                       transition={{ delay: 0.1 }}
                       className="text-gray-700 leading-relaxed mb-6 text-lg"
                     >
-                      To be recognized as a leading institution for women's education, fostering 
+                      To be recognized as a leading institution 's education, fostering 
                       holistic development and empowering young women to become confident, capable, 
                       and compassionate leaders who contribute meaningfully to society.
                     </motion.p>
@@ -857,7 +857,7 @@ const Home = () => {
                 className="relative rounded-3xl overflow-hidden shadow-2xl"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600" 
+                  src={img5} 
                   alt="About College" 
                   className="w-full h-[500px] object-cover"
                 />
@@ -1081,7 +1081,7 @@ const Home = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600" 
+                  src={img2}
                   alt="Students in library" 
                   className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
                 />
@@ -1123,7 +1123,7 @@ const Home = () => {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl group"
             >
               <img 
-                src="https://images.unsplash.com/photo-1562774053-701939374585?w=600" 
+                src={img1} 
                 alt="Campus facilities" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -1149,7 +1149,7 @@ const Home = () => {
               className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl group"
             >
               <img 
-                src="https://images.unsplash.com/photo-1576495199011-eb94736d05d6?w=600" 
+                src={imgs}
                 alt="Sports complex" 
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
@@ -1186,7 +1186,7 @@ const Home = () => {
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600" 
+                  src={learn} 
                   alt="Professional learning" 
                   className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
                 />

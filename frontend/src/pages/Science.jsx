@@ -25,6 +25,8 @@ import {
 } from 'lucide-react';
 import ScrollToTop from '../components/ScrollToTop';
 import img1 from '../assets/ban2.jpg';
+import che from '../assets/che.jpg';
+import sem from "../assets/sem.jpg"
 
 const Science = () => {
   const containerVariants = {
@@ -122,7 +124,7 @@ const Science = () => {
 
   const exhibitionImages = [
     'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400',
-    'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400',
+    che,
     'https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400'
   ];
 
@@ -421,7 +423,7 @@ const Science = () => {
                   className="relative h-64 rounded-2xl overflow-hidden shadow-xl group"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600" 
+                    src={sem} 
                     alt="Workshop"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                   />

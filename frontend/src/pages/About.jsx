@@ -40,10 +40,12 @@ const About = () => {
   ];
 
   const programs = [
-    { name: 'Bachelor of Arts', icon: '🎨', courses: 'Multiple specializations available' },
-    { name: 'Bachelor of Commerce', icon: '💼', courses: 'Commerce and Management streams' },
-    { name: 'Bachelor of Science', icon: '🔬', courses: 'Various science specializations' },
-    { name: 'BBM', icon: '📊', courses: 'Management and Business programs' }
+    { name: 'Bachelor of Arts (BA)', icon: '🎨', duration: '3 Years', subjects: ['English', 'History', 'Economics', 'Psychology'], color: 'bg-[#990c28]' },
+    { name: 'Bachelor of Commerce (B.Com)', icon: '💼', duration: '3 Years', subjects: ['Accountancy', 'Business Studies', 'Economics', 'Statistics'], color: 'bg-[#facc15]' },
+    { name: 'Bachelor of Science (B.Sc)', icon: '🔬', duration: '3 Years', subjects: ['Physics', 'Chemistry', 'Mathematics', 'Computer Science'], color: 'bg-[#990c28]' },
+    { name: 'Bachelor of Business Administration (BBA)', icon: '📊', duration: '3 Years', subjects: ['Management', 'Marketing', 'Finance', 'HR'], color: 'bg-[#facc15]' },
+    { name: 'Bachelor of Computer Applications (BCA)', icon: '💻', duration: '3 Years', subjects: ['Programming', 'Data Structures', 'Database Management', 'Web Development'], color: 'bg-[#990c28]' },
+    { name: 'Master of Commerce (M.Com)', icon: '📚', duration: '2 Years', subjects: ['Advanced Accountancy', 'Business Law', 'Financial Management', 'Taxation'], color: 'bg-[#facc15]' },
   ];
 
   const values = [
@@ -146,7 +148,7 @@ const About = () => {
                 <span className="text-[#990c28] font-bold text-sm uppercase tracking-wider">Welcome</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-[#990c28] mb-6">
-                Welcome to MES College For Women
+                Welcome to MES College
               </h2>
               <motion.div 
                 initial={{ scaleX: 0 }}
@@ -155,7 +157,7 @@ const About = () => {
                 className="h-2 w-24 bg-gradient-to-r from-[#facc15] to-yellow-600 rounded-full mb-6"
               />
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                MES M.S. Padmavathamma M.K. Sambasiva Setty First Grade College For Women, a pioneer 
+                MES M.S. Padmavathamma M.K. Sambasiva Setty First Grade College , a pioneer 
                 institution of Chikmagalur, came into existence in 1984 with a noble intention of 
                 catering to the needs of women in the field of education.
               </p>
@@ -333,7 +335,7 @@ const About = () => {
                   <div className="text-white">
                     <h3 className="text-2xl font-bold mb-1">Prof.Haseena Banu (MA,M.Phil)</h3>
                     <h3 className="text-xl font-bold mb-1">Principal</h3>
-                    {/* <p className="text-[#facc15]">MES College For Women</p> */}
+                    {/* <p className="text-[#facc15]">MES College</p> */}
                   </div>
                 </div>
               </motion.div>
@@ -423,7 +425,7 @@ const About = () => {
                 className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg border-l-4 border-[#facc15]"
               >
                 <p className="text-gray-700 leading-relaxed">
-                  MES M.S. Padmavathamma M. K. Sambasiva Setty First Grade College For Women came into 
+                  MES M.S. Padmavathamma M. K. Sambasiva Setty First Grade College  came into 
                   existence in 1984 with a noble intention of catering to the needs of women in the field 
                   of education. A bond of dedicated teachers along with supportive management have 
                   consistently shaped and honed the personality of students.
@@ -524,23 +526,31 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {programs.map((program, idx) => (
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ y: -10, scale: 1.05 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border-t-4 border-[#facc15] text-center"
+                whileHover={{ y: -8, scale: 1.03 }}
+                className={`${program.color} rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all relative overflow-hidden`}
               >
-                <motion.div
-                  animate={floatingAnimation}
-                  className="text-5xl mb-4"
-                >
+                {/* Decorative circle */}
+                <div className="absolute bottom-[-20px] right-[-20px] w-24 h-24 rounded-full bg-white/10"></div>
+                <motion.div animate={floatingAnimation} className="text-4xl mb-3">
                   {program.icon}
                 </motion.div>
-                <h3 className="text-xl font-bold text-[#990c28] mb-3">{program.name}</h3>
-                <p className="text-gray-600">{program.courses}</p>
+                <h3 className={`text-lg font-bold mb-2 ${program.color === 'bg-[#facc15]' ? 'text-[#990c28]' : 'text-white'}`}>{program.name}</h3>
+                <p className={`text-sm mb-3 flex items-center gap-1 ${program.color === 'bg-[#facc15]' ? 'text-[#7a0a20]' : 'text-white/80'}`}>
+                  ⏱ {program.duration}
+                </p>
+                <ul className="space-y-1">
+                  {program.subjects.map((subject, i) => (
+                    <li key={i} className={`text-sm flex items-center gap-1 ${program.color === 'bg-[#facc15]' ? 'text-[#7a0a20]' : 'text-white/90'}`}>
+                      <span>✅</span> {subject}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </motion.div>

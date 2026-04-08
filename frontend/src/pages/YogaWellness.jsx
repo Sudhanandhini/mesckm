@@ -605,7 +605,7 @@ const YogaWellness = () => {
                         <div className="font-bold mb-1">Address</div>
                         <div className="text-sm opacity-90">
                           Swami Vivekananda District Yoga Wellness Centre<br />
-                          MES M.S. Padmavathamma M.K. Sambasiva Setty College For Women<br />
+                          MES M.S. Padmavathamma M.K. Sambasiva Setty College <br />
                           Chikmagalur
                         </div>
                       </div>

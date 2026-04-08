@@ -46,7 +46,7 @@ const Donor = () => {
     { 
       year: '1984', 
       title: 'College Foundation',
-      desc: 'MES College for Women established with generous donation',
+      desc: 'MES College established with generous donation',
       icon: Building2
     },
     { 
@@ -272,7 +272,7 @@ const Donor = () => {
                 >
                   <p className="font-semibold text-[#990c28]">
                     No one should forget to mention his magnanimous donation of one million rupees to MES 
-                    Institution, to name the College as "Smt. Padmavathamma M.K. Sambasiva Setty College for Women"
+                    Institution, to name the College as "Smt. Padmavathamma M.K. Sambasiva Setty College "
                   </p>
                 </motion.div>
               </motion.div>

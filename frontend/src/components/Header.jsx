@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/mesckm.jpg';
+import pdf from '../assets/COLLEGE-COMMITTEES.pdf';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -67,13 +68,15 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="relative group">
+            {/* <div className="relative group">
               <button className="hover:text-primary transition-colors">Faculty ▼</button>
               <div className="absolute hidden group-hover:block bg-white shadow-lg min-w-[180px] lg:min-w-[200px] z-20 border border-gray-200">
                 <Link to="/faculty" className="block px-4 py-2 text-xs lg:text-sm hover:bg-gray-100 hover:text-primary transition-colors">Teaching</Link>
                 <Link to="/non-teaching" className="block px-4 py-2 text-xs lg:text-sm hover:bg-gray-100 hover:text-primary transition-colors">Non-Teaching</Link>
               </div>
-            </div>
+            </div> */}
+
+                  <a href={pdf} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors whitespace-nowrap">Mandatory Disclosure</a>
 
             <div className="relative group">
               <button className="hover:text-primary transition-colors">Forum ▼</button>
@@ -84,16 +87,16 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="relative group">
+            {/* <div className="relative group">
               <button className="hover:text-primary transition-colors whitespace-nowrap">Rank Holders ▼</button>
               <div className="absolute hidden group-hover:block bg-white shadow-lg min-w-[180px] lg:min-w-[200px] z-20 border border-gray-200">
                 <Link to="/rank-holders" className="block px-4 py-2 text-xs lg:text-sm hover:bg-gray-100 hover:text-primary transition-colors">Rank Holders</Link>
                 <Link to="/rank-holders/ug" className="block px-4 py-2 text-xs lg:text-sm hover:bg-gray-100 hover:text-primary transition-colors">UG Rank Holders</Link>
                 <Link to="/rank-holders/pg" className="block px-4 py-2 text-xs lg:text-sm hover:bg-gray-100 hover:text-primary transition-colors">PG Rank Holders</Link>
               </div>
-            </div>
+            </div> */}
  <Link to="/contact" className="hover:text-primary transition-colors whitespace-nowrap">Contact us</Link>
-           
+      
           </nav>
         </div>
 
@@ -125,7 +128,7 @@ const Header = () => {
               </div>
 
               {/* Faculty Dropdown */}
-              <div>
+              {/* <div>
                 <button 
                   onClick={() => toggleDropdown('faculty')}
                   className="w-full text-left py-2 text-sm sm:text-base hover:text-primary transition-colors flex justify-between items-center"
@@ -139,7 +142,7 @@ const Header = () => {
                     <Link to="/non-teaching" className="block py-2 text-xs sm:text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Non-Teaching</Link>
                   </div>
                 )}
-              </div>
+              </div> */}
 
               {/* Forum Dropdown */}
               <div>
@@ -160,7 +163,7 @@ const Header = () => {
               </div>
 
               {/* Rank Holders Dropdown */}
-              <div>
+              {/* <div>
                 <button 
                   onClick={() => toggleDropdown('rank')}
                   className="w-full text-left py-2 text-sm sm:text-base hover:text-primary transition-colors flex justify-between items-center"
@@ -175,7 +178,7 @@ const Header = () => {
                     <Link to="/rank-holders/pg" className="block py-2 text-xs sm:text-sm hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>PG Rank Holders</Link>
                   </div>
                 )}
-              </div>
+              </div> */}
 
               {/* Mobile Top Links */}
               <div className="border-t pt-4 mt-4 space-y-2">
@@ -183,6 +186,7 @@ const Header = () => {
                 <Link to="/scholarship" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Scholarship</Link>
                 <Link to="/yoga-wellness" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Yoga Wellness Centre</Link>
                 <Link to="/contact" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Contact us</Link>
+                <a href={pdf} target="_blank" rel="noopener noreferrer" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Mandatory Disclosure</a>
               </div>
             </nav>
           </div>

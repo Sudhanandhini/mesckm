@@ -260,9 +260,9 @@ const courses = [
       {/* BBA Detailed Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-1 gap-12 items-center mb-20">
             {/* Image Section */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -276,7 +276,7 @@ const courses = [
                   className="w-full h-[600px] object-cover"
                 />
                 
-                {/* Yellow Accent Strip */}
+              
                 <motion.div
                   initial={{ scaleY: 0 }}
                   whileInView={{ scaleY: 1 }}
@@ -286,7 +286,7 @@ const courses = [
                   style={{ transformOrigin: 'top' }}
                 />
 
-                {/* Floating Badge */}
+             
                 <motion.div
                   initial={{ scale: 0, rotate: -180 }}
                   whileInView={{ scale: 1, rotate: 0 }}
@@ -299,7 +299,7 @@ const courses = [
                   <div className="text-xs">Management Program</div>
                 </motion.div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Content Section */}
             <motion.div
