@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/mesckm.jpg';
 import pdf from '../assets/COLLEGE-COMMITTEES.pdf';
+import affiliationEnglish from '../assets/Affilation Approved Copy 2026-27 - English.jpg';
+import affiliationKannada from '../assets/Affilation Approved Copy 2026-27 - Kannada.jpg';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [affiliationOpen, setAffiliationOpen] = useState(false);
+  const [enlargedImage, setEnlargedImage] = useState(null);
 
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
@@ -17,10 +21,21 @@ const Header = () => {
       <div className="bg-primary text-white">
         <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row items-center justify-between text-[10px] sm:text-xs md:text-sm">
           <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-4 mb-2 md:mb-0">
-            <span className="flex items-center">📧 mesmspsckm@gmail.com</span>
-            <span className="flex items-center">📞 08262 – 200458</span>
+            <span className="flex items-center gap-1">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              mesmspsckm@gmail.com
+            </span>
+            <span className="flex items-center gap-1">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h2.28a1 1 0 01.97.76l1.1 4.41a1 1 0 01-.5 1.11l-1.7.85a11.05 11.05 0 005.52 5.52l.85-1.7a1 1 0 011.11-.5l4.41 1.1a1 1 0 01.76.97V19a2 2 0 01-2 2h-1C8.61 21 3 15.39 3 8.5V5z" />
+              </svg>
+              08262 – 200458
+            </span>
           </div>
           <div className="hidden md:flex space-x-3 lg:space-x-4 xl:space-x-6 text-xs lg:text-sm">
+            <button onClick={() => setAffiliationOpen(true)} className="hover:text-gold transition-colors">Affiliation</button>
             <Link to="/nss" className="hover:text-gold transition-colors">NSS</Link>
             <Link to="/scholarship" className="hover:text-gold transition-colors">Scholarship</Link>
             <Link to="/yoga-wellness" className="hover:text-gold transition-colors">Yoga Wellness Centre</Link>
@@ -182,6 +197,12 @@ const Header = () => {
 
               {/* Mobile Top Links */}
               <div className="border-t pt-4 mt-4 space-y-2">
+                <button
+                  onClick={() => { setAffiliationOpen(true); setMobileMenuOpen(false); }}
+                  className="block w-full text-left py-2 text-sm sm:text-base hover:text-primary transition-colors"
+                >
+                  Affiliation
+                </button>
                 <Link to="/nss" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>NSS</Link>
                 <Link to="/scholarship" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Scholarship</Link>
                 <Link to="/yoga-wellness" className="block py-2 text-sm sm:text-base hover:text-primary transition-colors" onClick={() => setMobileMenuOpen(false)}>Yoga Wellness Centre</Link>
@@ -192,6 +213,64 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      {/* Affiliation Popup */}
+      {affiliationOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={() => setAffiliationOpen(false)}
+        >
+          <div
+            className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-4 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setAffiliationOpen(false)}
+              className="absolute top-2 right-2 text-gray-600 hover:text-primary text-2xl leading-none p-2"
+              aria-label="Close"
+            >
+              &times;
+            </button>
+            <h2 className="text-lg sm:text-xl font-semibold text-center mb-4 text-primary">Affiliation Approved Copy 2026-27</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <img
+                src={affiliationEnglish}
+                alt="Affiliation Approved Copy 2026-27 - English"
+                className="w-full h-auto border border-gray-200 rounded cursor-zoom-in hover:opacity-90 transition-opacity"
+                onClick={() => setEnlargedImage(affiliationEnglish)}
+              />
+              <img
+                src={affiliationKannada}
+                alt="Affiliation Approved Copy 2026-27 - Kannada"
+                className="w-full h-auto border border-gray-200 rounded cursor-zoom-in hover:opacity-90 transition-opacity"
+                onClick={() => setEnlargedImage(affiliationKannada)}
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Enlarged Image Viewer */}
+      {enlargedImage && (
+        <div
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setEnlargedImage(null)}
+        >
+          <button
+            onClick={() => setEnlargedImage(null)}
+            className="absolute top-3 right-3 text-white hover:text-gold text-3xl leading-none p-2"
+            aria-label="Close"
+          >
+            &times;
+          </button>
+          <img
+            src={enlargedImage}
+            alt="Affiliation Approved Copy 2026-27 - enlarged"
+            className="max-w-full max-h-full object-contain cursor-zoom-out"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </>
   );
 };
